@@ -10,7 +10,8 @@ class PagesController < ApplicationController
   end
 
   def contest
-    @header = "Get ready to win!!"
+    flash[:notice] = "Sorry, the contest has ended"
+    redirect_to "/welcome"
   end
 
   def kitten
